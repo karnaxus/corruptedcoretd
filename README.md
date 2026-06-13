@@ -30,6 +30,8 @@ Players must work together to build, upgrade, and coordinate their defenses to s
 - `/disable tips` - Disable gameplay tips
 - `/enable debug` - Enable debug output
 - `/disable debug` - Disable debug output
+- `/enable wavesummary` - Enable wave end summary results
+- `/disable wavesummary` - Disable wave end summary results
 
 ## Project Structure
 
