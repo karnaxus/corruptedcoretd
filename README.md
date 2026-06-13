@@ -48,6 +48,14 @@ This repository contains the Lua source code used to develop Corrupted Core TD.
 
 The playable Warcraft III map may be distributed separately and may be protected from editing. The purpose of this repository is to provide transparency, educational value, and version history for the project's development.
 
+## Reporting Bugs
+
+Found a bug or issue while playing Corrupted Core TD?
+
+Please submit an issue on GitHub and include as much information as possible.
+
+See [BUG_REPORTING.md](BUG_REPORTING.md) for details.
+
 ## Credits
 
 Created and maintained by:
