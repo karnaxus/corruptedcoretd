@@ -10,6 +10,7 @@
     +-----------------------------------------------------------+
 ]]
 
-CC.Core.debugEnabled = true
+CC.Core.debugEnabled = false
 CC.Core.godModeEnabled = false
 CC.Core.startAtWave = nil
+CC.Core.gameTimer = nil
