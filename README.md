@@ -1,5 +1,7 @@
 # Corrupted Core TD
 
+![Corrupted Core](assets/corrupted-core-banner.png)
+
 **Created by Karnaxus#11298**
 
 ## Overview
