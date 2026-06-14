@@ -64,7 +64,7 @@ function CC.Systems.WaveManager.StartWave()
     local totalInvaders = math.ceil(waveSettings.total * gameSettings.invaderMultiplier)
     local totalGold = waveSettings.goldPerWave
 
-    if waveSettings.isBoss then
+    if waveSettings.category == CC.Config.WaveCategories.BOSS then
         totalInvaders = 1
     end
 
@@ -169,12 +169,14 @@ end
 function CC.Systems.WaveManager.SpawnCompleted()
     StartSound(gg_snd_SpawnEnd)
 
-    local unitName = CC.Config.Waves[CC.Systems.WaveManager.currentWave].name
+    local waveSettings = CC.Config.Waves[CC.Systems.WaveManager.currentWave]
+    local unitName = waveSettings.name
 
     CC.UI.MessageManager.Broadcast(
         CC.Core.Color.Orange(tostring(CC.Systems.WaveManager.totalSpawned)) .. " " ..
         CC.Core.Color.Yellow(unitName) ..
-        CC.Core.Color.Teal(" spawned!")
+        CC.Core.Color.Teal(" spawned!\n") ..
+        CC.Core.Color.Red(waveSettings.description)
     )
 end
 
@@ -188,7 +190,7 @@ function CC.Systems.WaveManager.WaveNotifications(wave)
         return
     end
 
-    if waveSettings.isAir then
+    if waveSettings.category == CC.Config.WaveCategories.AIR then
         StartSound(gg_snd_AirWave)
 
         CC.UI.MessageManager.Broadcast(
@@ -196,7 +198,7 @@ function CC.Systems.WaveManager.WaveNotifications(wave)
             CC.Core.Color.Orange("Flying creeps detected!\n") ..
             CC.Core.Color.Yellow("Ensure your defenses can attack air units.")
         )
-    elseif waveSettings.isBoss then
+    elseif waveSettings.category == CC.Config.WaveCategories.BOSS then
         StartSound(gg_snd_BossWave)
 
         CC.UI.MessageManager.Broadcast(
