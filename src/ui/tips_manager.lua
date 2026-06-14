@@ -18,6 +18,7 @@ CC.UI.TipsManager.interval = 45.00
 
 CC.UI.TipsManager.tips = {
     "Type /disable tips to turn off these tips. Type /enable tips to re-enable these tips.",
+    "To allow other players to build in your zone: type /allowbuild <player|all>. To deny an allowed player or players: type /denybuild <player|all>.",
     "Work together. Corrupted Core TD is a cooperative game and every lane matters.",
     "Don't spend all your gold immediately. Saving for upgrades can be more effective than building many weak towers.",
     "Watch the Air Wave indicator on the multiboard. Some towers cannot attack flying invaders.",
