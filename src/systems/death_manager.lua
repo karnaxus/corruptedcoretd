@@ -68,7 +68,7 @@ function CC.Systems.DeathManager.HandleDeath(unit)
 
             CC.Systems.PlayerManager.AddResource(player, "gold", totalGold)
 
-            if waveSettings.isBoss then
+            if waveSettings.category == CC.Config.WaveCategories.BOSS then
                 CC.Systems.BossManager.OnBossDeath(unit, waveSettings, killer)
             end
 
