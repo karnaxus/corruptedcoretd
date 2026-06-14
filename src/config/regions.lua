@@ -135,3 +135,17 @@ CC.Config.Regions.West = {
         "SWEndZone"
     }
 }
+
+--[[
+    All the player build zones.
+]]
+CC.Config.Regions.BuildZones = {
+    [0] = { "P1BZ1", "P1BZ2", "P1BZ3", "P1BZ4" },
+    [1] = { "P2BZ1", "P2BZ2", "P2BZ3", "P2BZ4" },
+    [2] = { "P3BZ1", "P3BZ2", "P3BZ3", "P3BZ4" },
+    [3] = { "P4BZ1", "P4BZ2", "P4BZ3", "P4BZ4" },
+    [4] = { "P5BZ1", "P5BZ2", "P5BZ3" },
+    [5] = { "P6BZ1", "P6BZ2", "P6BZ3" },
+    [6] = { "P7BZ1", "P7BZ2", "P7BZ3" },
+    [7] = { "P8BZ1", "P8BZ2", "P8BZ3" }
+}
