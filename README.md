@@ -22,6 +22,8 @@ Players must work together to build, upgrade, and coordinate their defenses to s
 - Command system
 - Lua-based architecture
 - Custom multiboard and UI systems
+- Player build zone permissions (allow/deny other players to build or not build in your build zone)
+- Interesting boss mechanics
 
 ## Commands
 
@@ -34,6 +36,8 @@ Players must work together to build, upgrade, and coordinate their defenses to s
 - `/disable debug` - Disable debug output
 - `/enable wavesummary` - Enable wave end summary results
 - `/disable wavesummary` - Disable wave end summary results
+- `/allowbuild <player|all>` - Allow building in your zone
+- `/denybuild <player|all>` - Remove build permission for your zone
 
 ## Project Structure
 
