@@ -79,19 +79,3 @@ function CC.Core.Helpers.FormatTime(seconds)
 
     return string.format("%02d:%02d", mins, secs)
 end
-
---[[
-    Center text within a fixed width.
-]]
-function CC.Core.Helpers.CenterText(text, width)
-    text = tostring(text or "")
-    width = width or 32
-
-    local padding = math.floor((width - string.len(text)) / 2)
-
-    if padding < 0 then
-        padding = 0
-    end
-
-    return string.rep(" ", padding) .. text
-end
