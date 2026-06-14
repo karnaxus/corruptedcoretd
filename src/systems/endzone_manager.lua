@@ -82,10 +82,11 @@ function CC.Systems.EndZoneManager.OnEnter(unit, regionName)
         CC.Core.Color.Orange(tostring(CC.Systems.EndZoneManager.GetLeaksLeft())) ..
         CC.Core.Color.Yellow(" " .. CC.Core.Helpers.SingularOrPlural("leak", "leaks", CC.Systems.EndZoneManager.GetLeaksLeft()) .. " left!")
     )
-    
+
     CC.Systems.UnitManager.TeleportUnit(unit)
 
     if CC.Systems.EndZoneManager.GetLeaksLeft() <= 0 then
+        CC.Systems.WaveManager.disableSpawning = true
         CC.Systems.GameManager.DeclareDefeat()
         return
     end
