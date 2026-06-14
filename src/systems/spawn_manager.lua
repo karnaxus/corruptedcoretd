@@ -294,7 +294,8 @@ function CC.Systems.SpawnManager.StartSpawn(spawn, pathKey, total, unitType, spa
 
         CC.Systems.SpawnManager.units[GetHandleId(unit)] = {
             spawn = spawn,
-            pathKey = pathKey
+            pathKey = pathKey,
+            currentRegion = spawnRegion
         }
 
         CC.Systems.LeaderboardManager.RegisterDamageTracking(unit)
@@ -315,7 +316,7 @@ function CC.Systems.SpawnManager.StartSpawn(spawn, pathKey, total, unitType, spa
 
         SetUnitMoveSpeed(unit, speed)
 
-        if waveSettings.isBoss then
+        if waveSettings.category == CC.Config.WaveCategories.BOSS then
             CC.Systems.BossManager.OnBossSpawn(unit, waveSettings)
         end
 
@@ -349,7 +350,8 @@ function CC.Systems.SpawnManager.OrderCreepToNextRegion(boss, unit)
 
     CC.Systems.SpawnManager.units[GetHandleId(unit)] = {
         spawn = bossUnitData.spawn,
-        pathKey = bossUnitData.pathKey
+        pathKey = bossUnitData.pathKey,
+        currentRegion = bossUnitData.currentRegion
     }
 
     local currentRegion = bossUnitData.currentRegion
