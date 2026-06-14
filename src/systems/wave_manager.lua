@@ -216,6 +216,11 @@ function CC.Systems.WaveManager.OnWaveComplete()
     local completedWave = CC.Systems.WaveManager.currentWave
     local nextWave = completedWave + 1
 
+    if CC.Systems.GameManager.gameOver == true then
+        CC.Systems.LeaderboardManager.WaveEndSummary(completedWave)
+        return
+    end
+
     if nextWave <= CC.Core.Constants.MAX_WAVES then
         local gameSettings = CC.Systems.GameManager.GetSettings()
 
