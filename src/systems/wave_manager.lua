@@ -16,6 +16,7 @@ CC.Systems.WaveManager.currentWave = 0
 CC.Systems.WaveManager.spawnFinished = true
 CC.Systems.WaveManager.totalSpawned = 0
 CC.Systems.WaveManager.waveModified = false
+CC.Systems.WaveManager.disableSpawning = false
 
 --[[
     Initialize the Wave Manager.
@@ -27,6 +28,7 @@ function CC.Systems.WaveManager.Init()
     CC.Systems.WaveManager.totalSpawned = 0
     CC.Systems.WaveManager.spawnFinished = true
     CC.Systems.WaveManager.waveModified = false
+    CC.Systems.WaveManager.disableSpawning = false
 
     CC.Core.Debug("WaveManager", "Wave Manager initialized.")
 end
@@ -216,7 +218,7 @@ function CC.Systems.WaveManager.OnWaveComplete()
     local completedWave = CC.Systems.WaveManager.currentWave
     local nextWave = completedWave + 1
 
-    if CC.Systems.GameManager.gameOver == true then
+    if CC.Systems.WaveManager.disableSpawning == true then
         CC.Systems.LeaderboardManager.WaveEndSummary(completedWave)
         return
     end
