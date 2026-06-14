@@ -101,3 +101,21 @@ function CC.Systems.UnitManager.TransferUnits(fromPlayer, toPlayer)
 
     DestroyGroup(group)
 end
+
+--[[
+    Gets the current health percentage for a unit.
+]]
+function CC.Systems.UnitManager.GetHealthPercent(unit)
+    if unit == nil then
+        return 0
+    end
+
+    local life = GetUnitState(unit, UNIT_STATE_LIFE)
+    local maxLife = GetUnitState(unit, UNIT_STATE_MAX_LIFE)
+
+    if maxLife <= 0 then
+        return 0
+    end
+
+    return (life / maxLife) * 100
+end
