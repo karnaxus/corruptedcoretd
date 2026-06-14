@@ -32,7 +32,7 @@ CC.Config.Waves = {
         hp = 90,
         goldPerKill = 4,
         goldPerWave = 100,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 1,
         leakValue = 1
     },
@@ -46,7 +46,7 @@ CC.Config.Waves = {
         hp = 190,
         goldPerKill = 6,
         goldPerWave = 125,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 2,
         leakValue = 1
     },
@@ -60,7 +60,7 @@ CC.Config.Waves = {
         hp = 325,
         goldPerKill = 8,
         goldPerWave = 150,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 3,
         leakValue = 1
     },
@@ -74,7 +74,7 @@ CC.Config.Waves = {
         hp = 475,
         goldPerKill = 10,
         goldPerWave = 175,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 4,
         leakValue = 1
     },
@@ -88,7 +88,7 @@ CC.Config.Waves = {
         hp = 650,
         goldPerKill = 12,
         goldPerWave = 200,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 5,
         leakValue = 1
     },
@@ -102,7 +102,7 @@ CC.Config.Waves = {
         hp = 850,
         goldPerKill = 14,
         goldPerWave = 250,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 6,
         leakValue = 1
     },
@@ -116,7 +116,7 @@ CC.Config.Waves = {
         hp = 1050,
         goldPerKill = 16,
         goldPerWave = 300,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 7,
         leakValue = 1
     },
@@ -130,7 +130,7 @@ CC.Config.Waves = {
         hp = 1250,
         goldPerKill = 18,
         goldPerWave = 350,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 8,
         leakValue = 1
     },
@@ -144,7 +144,7 @@ CC.Config.Waves = {
         hp = 1500,
         goldPerKill = 20,
         goldPerWave = 400,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 9,
         leakValue = 1
     },
@@ -158,7 +158,7 @@ CC.Config.Waves = {
         hp = 1750,
         goldPerKill = 24,
         goldPerWave = 450,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 10,
         leakValue = 1
     },
@@ -172,7 +172,7 @@ CC.Config.Waves = {
         hp = 2100,
         goldPerKill = 26,
         goldPerWave = 500,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 11,
         leakValue = 1
     },
@@ -186,7 +186,7 @@ CC.Config.Waves = {
         hp = 2400,
         goldPerKill = 28,
         goldPerWave = 550,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 12,
         leakValue = 1
     },
@@ -200,7 +200,7 @@ CC.Config.Waves = {
         hp = 2700,
         goldPerKill = 30,
         goldPerWave = 600,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 13,
         leakValue = 1
     },
@@ -214,7 +214,7 @@ CC.Config.Waves = {
         hp = 3050,
         goldPerKill = 32,
         goldPerWave = 650,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 14,
         leakValue = 1
     },
@@ -228,7 +228,7 @@ CC.Config.Waves = {
         hp = 3400,
         goldPerKill = 36,
         goldPerWave = 700,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 15,
         leakValue = 1
     },
@@ -242,7 +242,7 @@ CC.Config.Waves = {
         hp = 3800,
         goldPerKill = 38,
         goldPerWave = 750,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 16,
         leakValue = 1
     },
@@ -256,7 +256,7 @@ CC.Config.Waves = {
         hp = 4300,
         goldPerKill = 40,
         goldPerWave = 800,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 17,
         leakValue = 1
     },
@@ -270,7 +270,7 @@ CC.Config.Waves = {
         hp = 4800,
         goldPerKill = 42,
         goldPerWave = 850,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 18,
         leakValue = 1
     },
@@ -284,7 +284,7 @@ CC.Config.Waves = {
         hp = 5350,
         goldPerKill = 45,
         goldPerWave = 900,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 19,
         leakValue = 1
     },
@@ -298,7 +298,7 @@ CC.Config.Waves = {
         hp = 65000,
         goldPerKill = 150,
         goldPerWave = 1250,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 20,
         leakValue = 10
     },
@@ -312,7 +312,7 @@ CC.Config.Waves = {
         hp = 6000,
         goldPerKill = 50,
         goldPerWave = 1000,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 21,
         leakValue = 1
     },
@@ -326,7 +326,7 @@ CC.Config.Waves = {
         hp = 6700,
         goldPerKill = 55,
         goldPerWave = 1100,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 22,
         leakValue = 1
     },
@@ -340,7 +340,7 @@ CC.Config.Waves = {
         hp = 7500,
         goldPerKill = 60,
         goldPerWave = 1200,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 23,
         leakValue = 1
     },
@@ -354,7 +354,7 @@ CC.Config.Waves = {
         hp = 8350,
         goldPerKill = 65,
         goldPerWave = 1300,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 24,
         leakValue = 1
     },
@@ -368,7 +368,7 @@ CC.Config.Waves = {
         hp = 9300,
         goldPerKill = 75,
         goldPerWave = 1400,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 25,
         leakValue = 1
     },
@@ -382,7 +382,7 @@ CC.Config.Waves = {
         hp = 10300,
         goldPerKill = 85,
         goldPerWave = 1500,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 26,
         leakValue = 1
     },
@@ -396,7 +396,7 @@ CC.Config.Waves = {
         hp = 11400,
         goldPerKill = 95,
         goldPerWave = 1600,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 27,
         leakValue = 1
     },
@@ -410,7 +410,7 @@ CC.Config.Waves = {
         hp = 12600,
         goldPerKill = 110,
         goldPerWave = 1700,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 28,
         leakValue = 1
     },
@@ -424,7 +424,7 @@ CC.Config.Waves = {
         hp = 14000,
         goldPerKill = 125,
         goldPerWave = 1800,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 29,
         leakValue = 1
     },
@@ -438,7 +438,7 @@ CC.Config.Waves = {
         hp = 150000,
         goldPerKill = 750,
         goldPerWave = 3000,
-        spawnDelay = 0.50,
+        spawnDelay = 0.35,
         number = 30,
         leakValue = 15
     }
