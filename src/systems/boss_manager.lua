@@ -246,15 +246,12 @@ function CC.Systems.BossManager.CheckInfernal(boss, data)
         return
     end
 
-    local player = data.player
-
     local hpPercent = CC.Systems.UnitManager.GetHealthPercent(boss)
 
     if hpPercent <= threshold then
         CC.Systems.BossManager.SpawnOrcChampions(boss, data)
 
-        CC.UI.MessageManager.Player(
-            player,
+        CC.UI.MessageManager.Broadcast(
             CC.Core.Color.Purple("The Infernal Lord summons reinforcements!")
         )
 
@@ -278,7 +275,7 @@ function  CC.Systems.BossManager.CheckDoomGuard(boss, data)
     local threshold = data.config.enrageThreshold or 50
 
     if hpPercent <= threshold then
-        CC.Systems.BossManager.EnrageDoomGuard(boss, data.config.enrageSpeedBonus or 150, data.player)
+        CC.Systems.BossManager.EnrageDoomGuard(boss, data.config.enrageSpeedBonus or 150)
         data.enraged = true
     end
 end
@@ -290,7 +287,6 @@ function CC.Systems.BossManager.SpawnOrcChampions(boss, data)
     local x = GetUnitX(boss)
     local y = GetUnitY(boss)
     local owner = GetOwningPlayer(boss)
-    local playerData = CC.Systems.PlayerManager.GetPlayer(data.player)
 
     for i = 1, 5 do
         local angle = math.rad(i * 72)
@@ -305,12 +301,8 @@ function CC.Systems.BossManager.SpawnOrcChampions(boss, data)
 
         SetUnitPathing(unit, false)
 
-        if playerData ~= nil then
-            playerData.creepsAlive = playerData.creepsAlive + 1
-            CC.Systems.PlayerManager.UpdateNativeUI(playerData)
-
-            CC.Systems.SpawnManager.OrderCreepToNextRegion(unit, playerData)
-        end
+        CC.Systems.SpawnManager.invadersAlive = CC.Systems.SpawnManager.invadersAlive + 1
+        CC.Systems.SpawnManager.OrderCreepToNextRegion(boss, unit)
 
         DestroyEffect(
             AddSpecialEffect(
@@ -333,7 +325,7 @@ end
 --[[
     Enrage the Doom Guard boss.
 ]]
-function CC.Systems.BossManager.EnrageDoomGuard(boss, speedBonus, player)
+function CC.Systems.BossManager.EnrageDoomGuard(boss, speedBonus)
     local currentSpeed = GetUnitMoveSpeed(boss)
 
      SetUnitMoveSpeed(
@@ -349,8 +341,7 @@ function CC.Systems.BossManager.EnrageDoomGuard(boss, speedBonus, player)
         )
     )
 
-    CC.UI.MessageManager.Player(
-        player,
+    CC.UI.MessageManager.Broadcast(
         CC.Core.Color.Red("The Doom Guard Champion enraged!")
     )
 end
