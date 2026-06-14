@@ -54,6 +54,10 @@ end
     Handle when a unit enters an endzone region.
 ]]
 function CC.Systems.EndZoneManager.OnEnter(unit, regionName)
+    if CC.Systems.WaveManager.disableSpawning == true then
+        return
+    end
+
     local waveSettings = CC.Config.Waves[CC.Systems.WaveManager.currentWave]
     
     if waveSettings == nil then
